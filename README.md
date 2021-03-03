@@ -1,24 +1,24 @@
-# README
+# ThirdDimension
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Two-Sided Marketplace
 
-Things you may want to cover:
+Designed and Developed by
+Anthony Mann 2021
 
-* Ruby version
+Third Dimension is a two-sided marketplace for the sale of Dioramas, 3D printer Models, and associated files. The current marketplace is underdeveloped and not very accessible for all those who wish to create and sell their amazing creations or for those who wish to order one-of-a-kind Dioramas or purchase 3D model designs online.
 
-* System dependencies
+This is a problem that I feel needs to be addressed as I have often found myself looking to purchase Dioramas that people have created, however, there is very limited availability, especially within Australia.
 
-* Configuration
+[Website] - will be posted here on availability
 
-* Database creation
+[GitHub Repo](https://github.com/MrAjMann/ThirdDimension)
 
-* Database initialization
+### Features
 
-* How to run the test suite
+- Ability to sign up as a merchant.
 
-* Services (job queues, cache servers, search engines, etc.)
+- Add and Remove stock
 
-* Deployment instructions
+- Stripe Connectivity
 
-* ...
+-
