@@ -22,3 +22,31 @@ This is a problem that I feel needs to be addressed as I have often found myself
 - Stripe Connectivity
 
 -
+
+### Design MockUps
+
+[Designs on Figma](https://www.figma.com/file/0BKfLJqugqiiPCjpgB4TXq/Third-Dimension?node-id=0%3A1)
+
+---
+
+#### Landing Pages
+
+![Landing Pages](./app/assets/images/LandingPages.png)
+
+---
+
+#### Sign Up Pages
+
+![Sign Up Pages](./app/assets/images/SignUpPages.png)
+
+---
+
+#### Sign In Pages
+
+![Sign In Pages](./app/assets/images/SignInPages.png)
+
+---
+
+#### Shop Pages
+
+![Shop Pages](./app/assets/images/ShopPages.png)
