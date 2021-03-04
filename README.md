@@ -50,3 +50,9 @@ This is a problem that I feel needs to be addressed as I have often found myself
 #### Shop Pages
 
 ![Shop Pages](./app/assets/images/ShopPages.png)
+
+#### Gems used
+
+[devise](https://github.com/heartcombo/devise)
+
+[Simple Form](https://github.com/heartcombo/simple_form)
