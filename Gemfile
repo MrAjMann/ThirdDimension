@@ -26,6 +26,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 
 #custom gems
+gem 'bootstrap', '~> 4.6.0'
+gem 'jquery-rails'
 gem 'simple_form'
 gem 'devise'
 # Reduces boot times through caching; required in config/boot.rb
