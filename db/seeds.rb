@@ -7,4 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-# User = USer,create()
+User.create :first_name => 'John',:last_name => 'Doe', :is_merchant => "true", :email => 'john@gmail.com', :password => 'topsecret', :password_confirmation => 'topsecret'
+User.create :first_name => 'Sally',:last_name => 'Harper', :is_merchant => "false", :email => 'sally@gmail.com', :password => 'hotsauce', :password_confirmation => 'hotsauce'
+
+
