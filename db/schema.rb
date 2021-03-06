@@ -10,13 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_05_014121) do
+ActiveRecord::Schema.define(version: 2021_03_06_023640) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "merchants", id: false, force: :cascade do |t|
-    t.integer "merchant_id"
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.decimal "description"
+    t.boolean "availability"
+    t.string "category"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_products_on_user_id"
   end
 
   create_table "roles", force: :cascade do |t|
@@ -37,7 +44,6 @@ ActiveRecord::Schema.define(version: 2021_03_05_014121) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "is_merchant", null: false
     t.string "first_name", null: false
     t.string "last_name", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
@@ -52,5 +58,5 @@ ActiveRecord::Schema.define(version: 2021_03_05_014121) do
     t.index ["user_id"], name: "index_users_roles_on_user_id"
   end
 
-  add_foreign_key "merchants", "users", column: "merchant_id", name: "merchants_merchant_id_fkey"
+  add_foreign_key "products", "users"
 end
