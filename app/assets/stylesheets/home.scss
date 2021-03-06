@@ -6,11 +6,6 @@
   max-width: 100%;
 }
 
-body {
-  height: 100vh;
-  background: linear-gradient(164.75deg, #000000 21.57%, #6738a4 75.92%);
-}
-
 .innerContainer {
   color: #fff;
   height: 80vh;
@@ -28,6 +23,7 @@ body {
   .btn {
     width: 140px;
     position: absolute;
+    font-family: "Kurale", serif;
     top: 350px;
     background-color: #954c23;
     border: none;

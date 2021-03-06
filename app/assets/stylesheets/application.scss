@@ -14,9 +14,11 @@
  *= require_self
  */
 
+@import "bootstrap";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kurale&display=swap");
 
-.nav-link {
-  color: #ff7f00;
+body {
+  height: 100vh;
+  background: linear-gradient(164.75deg, #000000 21.57%, #6738a4 75.92%);
 }

@@ -1,19 +1,36 @@
-<nav class="navbar navbar-expand-lg navbar-dark">
+<nav class="navbar navbar-expand-md navbar-dark">
   <a class="navbar-brand" href="/home/page">Third Dimension</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <%=link_to "home", root_path, class: "sr-only"%>
+  <div class="collapse navbar-collapse me-auto" id="navbarNavAltMarkup">
+    <ul class="navbar-nav ml-auto">
+      <li>
+        <%=link_to "home", root_path, class: " sr-only"%>
+      </li>
       <%if user_signed_in?%>
-      <%= link_to "log out", destroy_user_session_path, method: :delete, class: "nav-link active"%>
-      <%= link_to "profile", root_path ,class: "nav-link active"%>
-
+      <li>
+        <%= link_to "log out", destroy_user_session_path, method: :delete, class: "nav-link active"%>
+      </li>
+      <li class="nav-item">
+        <%= link_to "profile", root_path ,class: "nav-link active"%>
+      </li>
       <%else%>
       <%= link_to "login", new_user_session_path, class: "nav-link active"%>
       <%end%>
-
-    </div>
+    </ul>
   </div>
 </nav>
+<div class="cat-bar navbar-dark">
+  <ul class="nav justify-content-center ">
+    <li class="text-white mx-3">
+      <%= link_to "Dioramas", products_path, class: "nav-link active text-white"%>
+    </li>
+    <li class="nav-item mx-3">
+      <%= link_to "Models", products_path, class: "nav-link active text-white"%>
+    </li>
+    <li class="nav-item mx-3">
+      <%= link_to "Supplies", products_path, class: "nav-link active text-white"%>
+    </li>
+  </ul>
+</div>
