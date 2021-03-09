@@ -4,6 +4,7 @@ class HomeController < ApplicationController
   def page
     
   end
+	
 
   private
 

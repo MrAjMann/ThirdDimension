@@ -31,6 +31,8 @@ gem 'jquery-rails'
 gem 'simple_form'
 gem 'devise'
 gem "rolify"
+
+gem "mini_magick"
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
@@ -50,3 +52,10 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "cloudinary", "~> 1.19"
+gem "activestorage-cloudinary-service", "~> 0.2.3"
+
+gem "dotenv", "~> 2.7"
+
+gem "dotenv-rails", "~> 2.7"
