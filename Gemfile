@@ -31,8 +31,12 @@ gem 'jquery-rails'
 gem 'simple_form'
 gem 'devise'
 gem "rolify"
-
+gem 'gravatar_image_tag'
 gem "mini_magick"
+
+# Product Zoom
+gem 'elevatezoom-rails'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 

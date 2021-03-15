@@ -10,9 +10,10 @@
       </li>
       <%if user_signed_in?%>
       <li>
-        <%= link_to "log out", destroy_user_session_path, method: :delete, class: "nav-link active"%>
+        <%= link_to "log out", destroy_user_session_path, method: :delete, class: "nav-link active mr-2"%>
       </li>
-      <li class="nav-item">
+      <li class="nav-item d-flex">
+        <%= image_tag user_avatar(current_user), class: "nav-avatar nav-item rounded-circle" %>
         <%= link_to "profile", root_path ,class: "nav-link active"%>
       </li>
       <%else%>

@@ -1,3 +1,66 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+p {
+  font-size: 18px;
+  color: #fff;
+  margin: 10px;
+}
+.image-container {
+  display: inline-flex;
+  flex-direction: column;
+  margin-top: 5px;
+  width: 500px;
+  // height: auto;
+}
+.images {
+  display: inline-flex;
+  flex-direction: column;
+  margin: 3rem 1rem;
+  width: 500px;
+  // height: auto;
+}
+
+.show-btn {
+  width: 140px;
+  font-size: 22px;
+  border-radius: 15px;
+  padding: 1rem 3rem 1rem 3rem;
+  text-decoration: none;
+  font-family: "Kurale", serif;
+  color: #fff;
+  background: #954c23;
+  border: none;
+  &:hover {
+    font-size: 22px;
+    text-decoration: none;
+    background-color: #ff7f00;
+    font-weight: bold;
+    color: #fff;
+  }
+}
+
+.tableHeader {
+  color: #fff;
+  // margin: 2rem !important;
+}
+
+td {
+  border-top: rgba(255, 255, 255, 0.5) solid 1px;
+  // margin-top: 3rem;
+  // margin-bottom: 3rem;
+}
+.product_col_td {
+  // padding: 5px;
+  color: #fff;
+}
+.products_page_image {
+  width: 75px;
+  height: auto;
+}
+.product_page_btn {
+  margin-left: 1rem;
+  padding: -1rem;
+  font-size: 16px;
+  color: #ccc;
+}

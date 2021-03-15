@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="jumbotron bg-transparent border">
+    <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-4">
+      <div>
+        <% if user_signed_in? %>
+        <%= image_tag user_avatar(current_user), class: "avatar rounded-circle" %>
+        <p class="">Welcome <%= current_user.first_name  %></p>
+        <p> <%= current_user.email%></p>
+        <%# add sales stats here%>
+        <div>
+          <p> <%= link_to "Edit your profile", edit_user_registration_path %></p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+  <h3 class="col mb-4 text-center text-white">All Products</h3>
+  <div class="card-transparent d-flex">
+
+
+    <table>
+      <thead>
+        <div class="tableHeader">
+          <tr>
+            <th class="text-white">Product Image</th>
+            <th class="text-white">Name</th>
+            <th class="text-white">Description</th>
+            <th class="text-white">Availability</th>
+            <th class="text-white">Category</th>
+            <th class="text-white">User</th>
+            <th colspan="2"></th>
+          </tr>
+        </div>
+      </thead>
+
+      <tbody>
+        <% current_user.products.each do |product| %>
+        <tr>
+          <td><%= image_tag(product.images[0],class: "products_page_image" ) if product.images.length > 0%></td>
+          <td class="product_col_td "><%= product.name %></td>
+          <td class="product_col_td "><%= product.description %></td>
+          <td class="product_col_td"><%= product.availability %></td>
+          <td class="product_col_td"><%= product.category %></td>
+          <td class="product_col_td"><%= product.user_id %></td>
+          <td>
+            <div class="d-flex">
+              <%= link_to 'Show', product,class:"product_page_btn"%>
+              <%= link_to 'Edit', edit_product_path(product),class:"product_page_btn"%>
+              <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' },class:"product_page_btn" %>
+            </div>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <br>
+    <%= link_to 'New Product', new_product_path %>
+  </div>

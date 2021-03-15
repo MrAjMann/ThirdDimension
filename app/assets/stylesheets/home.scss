@@ -5,7 +5,11 @@
 * {
   max-width: 100%;
 }
-
+.nav-avatar{
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+} 
 .innerContainer {
   color: #fff;
   height: 80vh;
@@ -57,4 +61,12 @@ p {
   right: -25rem;
   z-index: -3;
   opacity: 50%;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom:2rem ;
+  border-radius: 50%;
 }
