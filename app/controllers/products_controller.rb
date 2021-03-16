@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :authenticate_user!, only:[:new, :create, :edit, :update, :destroy]
-	before_action :is_merchant, only:[:new, :create, :edit, :update, :destroy]
+	# before_action :is_merchant, only:[:new, :create, :edit, :update, :destroy]
   before_action :set_product, only: %i[ show edit update destroy ]
   
 
@@ -11,9 +11,9 @@ class ProductsController < ApplicationController
 
   # GET /products/1 or /products/1.json
   def show
-    @product = Product.all
   end
 
+ 
   # GET /products/new
   def new
     @product = Product.new
@@ -23,10 +23,9 @@ class ProductsController < ApplicationController
   def edit
   end
 
-  # def listing
-  #   @product = Product.all
-  # end
-
+  def listing
+    @product = Product.all
+  end
   # POST /products or /products.json
   def create
     @product = Product.new(product_params)
@@ -71,7 +70,7 @@ class ProductsController < ApplicationController
       if current_user && current_user.has_role?(:merchant)
         @product = Product.find(params[:id])
       else
-       redirect_to product_listing_path
+       redirect_to product_path
       end
     end
 
@@ -80,12 +79,5 @@ class ProductsController < ApplicationController
       params.require(:product).permit(:name, :description, :availability, :category, :user_id, images: [])
     end
 
-    def is_merchant
-      if current_user && current_user.has_role?(:merchant)
-        return
-      else
-        flash[:alert] = "You are no authorised to access this information"
-        redirect_to root_path
-      end
-    end
+    
 end

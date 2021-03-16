@@ -1,18 +1,27 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
 
-<h1 class="text-white text-center mb-5">All Products</h1>
+  <p id="notice"><%= notice %></p>
+  <h1 class="text-white text-center mb-5">All Products</h1>
 
-<div class=" card col-md-4 h-100 mt-5">
-  <div class="card-body text-black">
-    <% @products.each do |product| %>
-    <h3 class="card-title mt-3 text-dark"><%= product.name %></h3>
-    <%= image_tag(product.images[0],class:"mt-3 mb-3" ) if product.images.length > 0%>
-    <p class="text-dark text-left"> <%= product.description %> </p>
-    <p class="text-dark text-left">$1200</p>
-    <button class="btn">Buy Now</button>
-    <div>
+  <div class="d-flex">
 
+    <div class="row ">
+
+      <% @products.each do |product| %>
+      <div class="card col-md-4">
+        <div class="">
+          <div class="card-body text-black">
+            <h3 class="card-title text-dark "><%= product.name %></h3>
+            <div class="justify-content-center">
+              <%= image_tag(product.images[0],class:"text-center") if product.images.length > 0%>
+              <p class="card-text text-dark text-left text-truncate "> <%= product.description %> </p>
+              <p class="text-dark price-style mb-5">$1200</p>
+              <%= link_to "Show More", product, class: "btn btn-primary btn-lg"%>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
     </div>
-    <% end %>
   </div>
 </div>

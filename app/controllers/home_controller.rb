@@ -3,20 +3,22 @@ class HomeController < ApplicationController
 	
 
   def page
-		render :profile
+		if current_user && user_signed_in? 
+			render :profile
+		else
+			render :page
+		end
   end
 	
 	def show
 		# @product = Product.find(params[:product_id])
-		
-		@user_products = current_user.products
-			
+		@user_products = current_user.products		
 	end
 
+	
 	def user_params
-		params.require(:user).permit(:fist_name,:last_name, :user_id, avatar:[],products_attributes: [:id,:name,:description])
+		params.require(:user).permit(:first_name, :last_name, :email, :user_id, avatar:[], products_attributes: [:id,:name,:description])
 	end
-
   private
 
 

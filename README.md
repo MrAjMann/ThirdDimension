@@ -13,15 +13,12 @@ This is a problem that I feel needs to be addressed as I have often found myself
 
 [GitHub Repo](https://github.com/MrAjMann/ThirdDimension)
 
-### Features
+### Features and Functionality
 
-- Ability to sign up as a merchant.
-
-- Add and Remove stock
-
-- Stripe Connectivity
-
--
+- User Registration 
+- User Dashboard with Product management
+- Each User can have an avatar - As a back-up it is connected to gravater
+- **Stripe Connectivity** 
 
 ### Design MockUps
 
@@ -51,8 +48,13 @@ This is a problem that I feel needs to be addressed as I have often found myself
 
 ![Shop Pages](./app/assets/images/ShopPages.png)
 
-#### Gems used
-
-[devise](https://github.com/heartcombo/devise)
+### Gems used
+[Devise](https://github.com/heartcombo/devise)
 
 [Simple Form](https://github.com/heartcombo/simple_form)
+
+[Gravatar](https://github.com/mdeering/gravatar_image_tag)
+
+### User Stories
+
+As a user, I want to be able to view all the available products

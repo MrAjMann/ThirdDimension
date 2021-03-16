@@ -14,11 +14,11 @@
     </div>
     <% end %>
   </div>
-
+  <%if current_user.products.count == 0%>
+  <p>To add products click the button below</p>
+  <%else%>
   <h3 class="col mb-4 text-center text-white">All Products</h3>
   <div class="card-transparent d-flex">
-
-
     <table>
       <thead>
         <div class="tableHeader">
@@ -42,10 +42,9 @@
           <td class="product_col_td "><%= product.description %></td>
           <td class="product_col_td"><%= product.availability %></td>
           <td class="product_col_td"><%= product.category %></td>
-          <td class="product_col_td"><%= product.user_id %></td>
           <td>
-            <div class="d-flex">
-              <%= link_to 'Show', product,class:"product_page_btn"%>
+            <div class="d-flex ">
+              <%= link_to 'Show', product ,class:"product_page_btn"%>
               <%= link_to 'Edit', edit_product_path(product),class:"product_page_btn"%>
               <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' },class:"product_page_btn" %>
             </div>
@@ -54,6 +53,7 @@
         <% end %>
       </tbody>
     </table>
-    <br>
-    <%= link_to 'New Product', new_product_path %>
+    <%end%>
   </div>
+  <br>
+  <%= link_to 'New Product', new_product_path, class:"d-flex mt-2" %>

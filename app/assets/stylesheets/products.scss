@@ -58,6 +58,13 @@ td {
   width: 75px;
   height: auto;
 }
+
+.image-show-page{
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
 .product_page_btn {
   margin-left: 1rem;
   padding: -1rem;

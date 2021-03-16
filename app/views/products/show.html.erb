@@ -1,32 +1,35 @@
-<p id="notice"><%= notice %></p>
-<div class="jumbotron ">
+<h2 class="container text-center text-light">All Products</h2>
+
+<div class="card text-center mt-5">
   <div>
-    <h3 class="text-white">
-      Name:
-    </h3>
-    <p class="text-white mt-2">
+
+    <p class=" text-dark mt-2 ">
       <%= @product.name %>
     </p>
 
 
-    <h3 class="text-white">
-      Description:
-    </h3>
-    <p class="text-white mt-2">
+    <p class="text-dark  mt-2">
       <%= @product.description %>
     </p>
 
 
-    <h3 class="pr-3 text-white">
-      Category:
-    </h3>
-    <p class="text-white mt-2">
+    <p class="text-dark white mt-2">
       <%= @product.category %>
     </p>
 
+    <div class="row justify-content-md-center">
+      <div class="m-2">
+        <% @product.images.each_with_index do |image, i| %>
+        <%= image_tag image, class: "col-md-4 m-2 " %>
+        <%end%>
+      </div>
+    </div>
 
 
-    <%= link_to 'Edit', edit_product_path(@product), class:'show-btn' %> |
-    <%= link_to 'Back', products_path , class:'show-btn' %>
+    <div class="m-5">
+      <%= link_to 'Edit', edit_product_path(@product), class:'btn product_page_btn ' %>
+      <%= link_to 'Back', products_path, class:'btn product_page_btn'%>
+    </div>
   </div>
+
 </div>
