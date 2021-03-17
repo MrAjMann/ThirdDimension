@@ -1,7 +1,8 @@
 class ProductsController < ApplicationController
   before_action :authenticate_user!, only:[:new, :create, :edit, :update, :destroy]
-	# before_action :is_merchant, only:[:new, :create, :edit, :update, :destroy]
-  before_action :set_product, only: %i[ show edit update destroy ]
+	load_and_authorize_resource
+  
+  before_action :set_product, only: %i[show edit update destroy ]
   
 
   # GET /products or /products.json
@@ -11,6 +12,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1 or /products/1.json
   def show
+      @product = Product.find(params[:id])
   end
 
  
@@ -29,7 +31,7 @@ class ProductsController < ApplicationController
   # POST /products or /products.json
   def create
     @product = Product.new(product_params)
-    @product.user_id = current_user.id
+    @product.id = current_user.user_id
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: "Product was successfully created." }
@@ -66,12 +68,9 @@ class ProductsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
 
+
     def set_product
-      if current_user && current_user.has_role?(:merchant)
         @product = Product.find(params[:id])
-      else
-       redirect_to product_path
-      end
     end
 
     # Only allow a list of trusted parameters through.

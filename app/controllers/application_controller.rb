@@ -7,5 +7,12 @@ class ApplicationController < ActionController::Base
          u.permit(:first_name, :last_name, :avatar, :email, :password, :password_confirmation,
           :current_password) 
     }
+    end
+    rescue_from CanCan::AccessDenied do |exception|
+    respond_to do |format|
+      format.html { 
+        render file: "#{Rails.root}/public/401", alert: exception.message
+      }
+    end
   end
 end

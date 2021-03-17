@@ -16,10 +16,10 @@ This is a problem that I feel needs to be addressed as I have often found myself
 
 ### Features and Functionality
 
-- User Registration 
+- User Registration
 - User Dashboard with Product management
 - Each User can have an avatar - As a back-up it is connected to gravater
-- **Stripe Connectivity** 
+- **Stripe Connectivity**
 
 ### Design MockUps
 
@@ -50,6 +50,7 @@ This is a problem that I feel needs to be addressed as I have often found myself
 ![Shop Pages](./app/assets/images/ShopPages.png)
 
 ### Gems used
+
 [Devise](https://github.com/heartcombo/devise)
 
 [Simple Form](https://github.com/heartcombo/simple_form)

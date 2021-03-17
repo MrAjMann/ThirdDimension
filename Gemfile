@@ -63,3 +63,5 @@ gem "activestorage-cloudinary-service", "~> 0.2.3"
 gem "dotenv", "~> 2.7"
 
 gem "dotenv-rails", "~> 2.7"
+
+gem "cancancan", "~> 3.2"
