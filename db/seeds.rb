@@ -11,3 +11,4 @@ User.create :first_name => 'John',:last_name => 'Doe', :email => 'john@gmail.com
 User.create :first_name => 'Sally',:last_name => 'Harper', :email => 'sally@gmail.com', :password => 'hotsauce', :password_confirmation => 'hotsauce'
 
 
+

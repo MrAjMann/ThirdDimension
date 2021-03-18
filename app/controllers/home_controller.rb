@@ -17,7 +17,7 @@ class HomeController < ApplicationController
 
 	
 	def user_params
-		params.require(:user).permit(:first_name, :last_name, :email, :user_id, avatar:[], products_attributes: [:id,:name,:description])
+		params.require(:user).permit(:first_name, :last_name, :email, :user_id, avatar:[],products_attributes: [:id,:name,:description])
 	end
   private
 

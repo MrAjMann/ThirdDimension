@@ -32,9 +32,10 @@
 
     <div class="m-5">
       <%= link_to "Buy Now", new_order_path(@product.id),class: 'product_page_btn'%>
-      <%= link_to 'Edit', edit_product_path(@product), class:'product_page_btn' %>
-      <%= link_to 'Back', products_path, class:'product_page_btn'%>
+      <%= link_to 'Edit', edit_product_path(@product), class:'product_page_btn' if current_user && current_user == @product.user %>
+      <%= link_to 'Back', products_path, class:'product_page_btn' if current_user && current_user == @product.user%>
     </div>
+
   </div>
 
 </div>

@@ -18,8 +18,8 @@
               </p>
               <p class="text-dark price-style text-center mb-5">$<%= product.price %></p>
               <div class="button-group">
-                <%= link_to "Buy Now", new_order_path(product_id: product.id),class: "buy-button btn-primary btn-lg" %>
-                <%= link_to "Show More", product, class: "btn btn-primary btn-lg"%>
+                <%= link_to "Buy Now", new_order_path(product_id: product.id),class: "product_page_btn" %>
+                <%= link_to "Show More", product, class: "product_page_btn"%>
               </div>
             </div>
           </div>

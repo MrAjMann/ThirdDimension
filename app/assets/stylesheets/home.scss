@@ -24,18 +24,6 @@
     text-align: left;
     // align-items: left;
   }
-  .btn {
-    width: 140px;
-    position: absolute;
-    font-family: "Kurale", serif;
-    top: 350px;
-    background-color: #954c23;
-    border: none;
-    &:hover {
-      background-color: #ff7f00;
-      font-weight: bold;
-    }
-  }
 }
 
 h1,
@@ -69,4 +57,24 @@ p {
   object-fit: contain;
   margin-bottom:2rem ;
   border-radius: 50%;
+}
+
+.get-started-btn {
+  width: 140px;
+  margin-top:1rem;
+  margin-bottom:1rem;
+  font-family: "Kurale", serif;
+  background-color: #ff7f00 !important;
+  position: absolute;
+  bottom: 200px;
+  color: white !important;
+  font-weight: bold !important;
+  border: none;
+  &:hover {
+    cursor: pointer;
+    background-color: #ff7f00;
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+  }
 }
