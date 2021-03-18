@@ -3,10 +3,13 @@ class HomeController < ApplicationController
 	
 
   def page
+		# We check if a user is signed in or not 
 		if current_user && user_signed_in? 
+			#If they are signed in then we show thier profile
 			render :profile
 		else
 			render :page
+			#If not then we show the landing page
 		end
   end
 	
@@ -23,12 +26,6 @@ class HomeController < ApplicationController
 
 
 
-  def is_merchant
-		if current_user && current_user.has_role?(:merchant)
-		else
-			flash[:alert] = "You are no authorised to access this information"
-		end
-
 	  def image_type
 			if images.attached? == false
 				errors.add(:avatar, "are missing!")
@@ -41,6 +38,3 @@ class HomeController < ApplicationController
 		end
 	end
 
-
-
-end

@@ -21,6 +21,19 @@ This is a problem that I feel needs to be addressed as I have often found myself
 - Each User can have an avatar - As a back-up it is connected to gravater
 - **Stripe Connectivity**
 
+### Target audience
+
+The target audience for my online marketplace is those interested in Buying, Selling and Creation of 3D Models and Dioramas.
+
+### Tech Stack:
+
+Ruby on Rails - The heart of the application.
+HTML - The layout of the application this includes **embedded ruby** code to help convey information to the user.
+Bootstrap 4.6 - Used for a base styling
+scss - Used to enhance / change Bootstraps initial styles
+Heroku - Deployment of the Production Application
+Cloudinary - Is used to store Images online in the cloud.
+
 ### Design MockUps
 
 [Designs on Figma](https://www.figma.com/file/0BKfLJqugqiiPCjpgB4TXq/Third-Dimension?node-id=0%3A1)
@@ -59,4 +72,50 @@ This is a problem that I feel needs to be addressed as I have often found myself
 
 ### User Stories
 
-As a user, I want to be able to view all the available products
+- As a Buyer, I want to be able to view all available products without have to sign in or register an account.
+
+- As a Seller I want to be able easily add my models to the store including multiple images.
+
+- As a Registered user I want to be able to edit and remove my account.
+
+- As a Registered user I want to be able to add a profile image or a logo to my account.
+
+- As a Buyer I want a safe and easy to use way to pay for my purchases.
+
+- As a Buyer user I don't want my creditcard details stored in a database.
+
+- As a Seller I want to be able to remove products when I no longer have them in stock.
+
+- As Registered user I want my password to be encrypted and secure.
+
+- As a Registered user I don't want another seller to be able to edit or remove my products.
+
+### ERD
+
+![ERD Diagram](./app/assets/images/Third-Dimension-ERD.png)
+[ERD on DB Diagrams.io](https://dbdiagram.io/d/603c5747fcdcb6230b21e7c8)
+
+### High Level components (Abstractions)
+
+In this application, I wanted a design that is easy to use and not overly complicated for both buyers and sellers.
+
+The Design is very visual and will help guide a user to their destination, no matter if this is registering and selling products or simply browsing the collection and purchasing items for our merchants.
+
+The marketplace application starts on a Landing page and depending on whether the user is registered or not will define what page the user will see. How? you ask, well let me explain:
+Inside our application is what is known as a controller this in simple terms tells the application what to do based on a user's input, So I have a piece of code in this controller that will either show a landing page or a user profile page.
+
+Our appropriately named controller.
+
+```ruby
+  def page
+  # We check if a user is signed in or not
+		if current_user && user_signed_in?
+    #if they are signed in then we show thier profile
+			render :profile
+		else
+    #If not then we show the landing page
+			render :page
+		end
+  end
+
+```
