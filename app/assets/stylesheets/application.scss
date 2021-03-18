@@ -25,11 +25,12 @@ body {
 
 .user-btn {
   width: 140px;
-  margin-top:1rem;
-  margin-bottom:1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   font-family: "Kurale", serif;
   background-color: #ff7f00 !important;
   position: absolute;
+  left: 200px;
   bottom: 0px;
   color: white;
   font-weight: bold;
@@ -43,3 +44,44 @@ body {
   }
 }
 
+.buy-button {
+  text-align: center;
+  width: 140px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: "Kurale", serif;
+  background-color: #ff7f00;
+  position: absolute;
+  left: 15px;
+  bottom: 0px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  &:hover {
+    cursor: pointer;
+    background-color: #ff7f00;
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+  }
+}
+.product_page_btn {
+  text-align: center;
+  width: 140px;
+  margin-top: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-family: "Kurale", serif;
+  background-color: #ff7f00;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  &:hover {
+    cursor: pointer;
+    background-color: #ff7f00;
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+  }
+}

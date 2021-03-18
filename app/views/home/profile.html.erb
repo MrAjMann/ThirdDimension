@@ -23,12 +23,13 @@
       <thead>
         <div class="tableHeader">
           <tr>
-            <th class="text-white">Product Image</th>
-            <th class="text-white">Name</th>
-            <th class="text-white">Description</th>
-            <th class="text-white">Availability</th>
-            <th class="text-white">Category</th>
-            <th class="text-white">User</th>
+            <th class="text-white p-3">Product Image</th>
+            <th class="text-white p-3">Name</th>
+            <th class="text-white p-3">Description</th>
+
+            <th class="text-white p-3">Category</th>
+            <th class="text-white p-3 ">Price</th>
+            <th class="text-white p-3">User</th>
             <th colspan="2"></th>
           </tr>
         </div>
@@ -38,10 +39,11 @@
         <% current_user.products.each do |product| %>
         <tr>
           <td><%= image_tag(product.images[0],class: "products_page_image" ) if product.images.length > 0%></td>
-          <td class="product_col_td "><%= product.name %></td>
-          <td class="product_col_td "><%= product.description %></td>
-          <td class="product_col_td"><%= product.availability %></td>
-          <td class="product_col_td"><%= product.category %></td>
+          <td class="product_col_td "><%= product.name.capitalize %></td>
+          <td class="product_col_td "><%= product.description.capitalize %></td>
+          <td class="product_col_td p-3"><%= product.category %></td>
+          <td class="product_col_td p-3"><%= product.price %></td>
+          <td class="product_col_td p-3"><%= product.user.first_name %></td>
           <td>
             <div class="d-flex ">
               <%= link_to 'Show', product ,class:"product_page_btn"%>

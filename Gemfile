@@ -33,6 +33,7 @@ gem 'devise'
 gem "rolify"
 gem 'gravatar_image_tag'
 gem "mini_magick"
+gem "cancancan", "~> 3.2"
 
 # Product Zoom
 gem 'elevatezoom-rails'
@@ -64,4 +65,4 @@ gem "dotenv", "~> 2.7"
 
 gem "dotenv-rails", "~> 2.7"
 
-gem "cancancan", "~> 3.2"
+gem "stripe", "~> 5.30"
