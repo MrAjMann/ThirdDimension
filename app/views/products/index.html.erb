@@ -11,12 +11,16 @@
       <div class="card col-md-4">
         <div class="">
           <div class="card-body text-black">
-            <h3 class="card-title text-dark "><%= product.name %></h3>
+            <h3 class="card-title text-dark "><%= product.name.capitalize %></h3>
             <div class="justify-content-center">
               <%= image_tag(product.images[0],class:"text-center") if product.images.length > 0%>
-              <p class="card-text text-dark text-left text-truncate "> <%= product.description %> </p>
-              <p class="text-dark price-style mb-5">$1200</p>
-              <%= link_to "Show More", product, class: "btn btn-primary btn-lg"%>
+              <p class="card-text text-dark text-left text-truncate "> <%= product.description.capitalize %></p>
+              </p>
+              <p class="text-dark price-style text-center mb-5">$<%= product.price %></p>
+              <div class="button-group">
+                <%= link_to "Buy Now", new_order_path(product_id: product.id),class: "buy-button btn-primary btn-lg" %>
+                <%= link_to "Show More", product, class: "btn btn-primary btn-lg"%>
+              </div>
             </div>
           </div>
         </div>

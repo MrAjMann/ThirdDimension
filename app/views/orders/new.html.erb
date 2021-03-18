@@ -1,0 +1,38 @@
+<h1 class="text-light">Your Order</h1>
+<table>
+  <thead>
+    <tr>
+      <td class="text-white p-3 ">Product Image</td>
+      <td class="text-white p3">Seller</td>
+      <td class="text-white p-3 ">Product Name</td>
+      <td class="text-white p-3">Product Description</td>
+      <td class="text-white p-3">Price</td>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= image_tag(@product.images[0],class: "products_page_image" ) if @product.images.length > 0%></td>
+      <td class="product_col_td p-3"><%= @product.user.first_name.capitalize %></td>
+      <td class="product_col_td p-3"><%= @product.name.capitalize %></td>
+      <td class="product_col_td p-3"><%= @product.description.capitalize %></td>
+      <td class="product_col_td p-3"><%= number_to_currency  @product.price %></td>
+    </tr>
+  </tbody>
+</table>
+
+<button style="background:#ff7f00; border:none; border-radius:5px;" id="pay-now">Checkout</button>
+
+<script src="https://js.stripe.com/v3/"></script>
+
+<script>
+  const stripe = Stripe('<%= ENV["STRIPE_PUBLIC_KEY"] %>')
+
+  function redirectToStripe() {
+    stripe.redirectToCheckout({
+      sessionId: '<%= @session.id %>'
+    })
+  }
+
+  document.getElementById("pay-now").addEventListener("click", redirectToStripe)
+</script>

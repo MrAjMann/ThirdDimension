@@ -4,17 +4,21 @@
   <div>
 
     <p class=" text-dark mt-2 ">
-      <%= @product.name %>
+      <%= @product.name.capitalize %>
     </p>
 
 
     <p class="text-dark  mt-2">
-      <%= @product.description %>
+      <%= @product.description.capitalize %>
     </p>
 
 
     <p class="text-dark white mt-2">
       <%= @product.category %>
+    </p>
+
+    <p class="text-dark white mt-2">
+      $<%= @product.price %>
     </p>
 
     <div class="row justify-content-md-center">
@@ -27,8 +31,9 @@
 
 
     <div class="m-5">
-      <%= link_to 'Edit', edit_product_path(@product), class:'btn product_page_btn ' %>
-      <%= link_to 'Back', products_path, class:'btn product_page_btn'%>
+      <%= link_to "Buy Now", new_order_path(@product.id),class: 'product_page_btn'%>
+      <%= link_to 'Edit', edit_product_path(@product), class:'product_page_btn' %>
+      <%= link_to 'Back', products_path, class:'product_page_btn'%>
     </div>
   </div>
 
