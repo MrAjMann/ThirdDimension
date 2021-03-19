@@ -33,6 +33,8 @@ Bootstrap 4.6 - Used for a base styling
 scss - Used to enhance / change Bootstraps initial styles
 Heroku - Deployment of the Production Application
 Cloudinary - Is used to store Images online in the cloud.
+Github - Is used for version and source control.
+Gravatar - Default profile Images
 
 ### Design MockUps
 
@@ -107,6 +109,8 @@ Inside our application is what is known as a controller this in simple terms tel
 Our appropriately named controller.
 
 ```ruby
+#Home Controller
+#Setes the Page
   def page
   # We check if a user is signed in or not
 		if current_user && user_signed_in?
@@ -119,3 +123,5 @@ Our appropriately named controller.
   end
 
 ```
+
+As a registered user you have the option to be able to sell your creations to the the public on top of that you also gain access to your profile page, which gives you that access to manage your products and user information.

@@ -4,8 +4,9 @@
       <div>
         <% if user_signed_in? %>
         <%= image_tag user_avatar(current_user), class: "avatar rounded-circle" %>
-        <p class="">Welcome <%= current_user.first_name  %></p>
-        <p> <%= current_user.email%></p>
+        <p class="">Welcome <%= (current_user.first_name + " " + current_user.last_name) %>!</p>
+        <p> Email: <%= current_user.email%></p>
+        <p>Listed Products: <%= current_user.products.all.count%></p>
         <%# add sales stats here%>
         <div>
           <p> <%= link_to "Edit your profile", edit_user_registration_path %></p>
@@ -58,4 +59,4 @@
     <%end%>
   </div>
   <br>
-  <%= link_to 'New Product', new_product_path, class:"d-flex mt-2" %>
+  <%= link_to 'Add New Product', new_product_path, class:"d-flex product_page_btn p-3", style: "width:160px;" %>
