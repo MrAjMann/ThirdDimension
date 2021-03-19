@@ -23,7 +23,7 @@ This is a problem that I feel needs to be addressed as I have often found myself
 
 ### Special links
 
-[Website] - will be posted here on availability
+[Third Dimension Website](https://thirddimension.herokuapp.com/)
 
 [GitHub Repo](https://github.com/MrAjMann/ThirdDimension)
 
